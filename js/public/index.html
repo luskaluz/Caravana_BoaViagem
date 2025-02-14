@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Registro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="buttons">
+        <button id="show-register">Cadastro</button>
+        <button id="show-login">Login</button>
+    </div>
+    
+    <div class="container">
+        <div id="register-form" class="form">
+            <h2>Cadastro</h2>
+            <input type="text" id="name" placeholder="Nome">
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="Senha">
+            <input type="text" id="phone" placeholder="Telefone">
+            <input type="number" id="age" placeholder="Idade">
+            <button id="register-btn">Registrar</button>
+        </div>
+
+        <div id="login-form" class="form" style="display: none;">
+            <h2>Login</h2>
+            <input type="email" id="loginEmail" placeholder="Email">
+            <input type="password" id="loginPassword" placeholder="Senha">
+            <button id="login-btn">Login</button>
+        </div>
+    </div>
+
+    
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="script.js" type="module"></script>
+
+
+</body>
+</html>
