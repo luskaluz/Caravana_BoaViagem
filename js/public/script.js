@@ -3,7 +3,7 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, up
 import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBCp6XmixMcOTCeUYLwQgT62Yb_ZB2yrmw",
+    apiKey: "",
     authDomain: "projeto-caravana.firebaseapp.com",
     projectId: "projeto-caravana",
     storageBucket: "projeto-caravana.firebasestorage.app",
