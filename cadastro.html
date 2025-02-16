@@ -19,9 +19,42 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Cadastro</h1>
-        <p>Informações de contato e formulário.</p>
+     <main>
+        <div class="botoes">
+            <button id="mostrar-cadastro">Cadastro</button>
+            <button id="mostrar-login">Login</button>
+        </div>
+        
+        <div class="container">
+            <div id="form-cadastro" class="formulario" style="display: none;">
+                <h2>Cadastro</h2>
+                <input type="text" id="nome" placeholder="Nome">
+                <input type="email" id="email" placeholder="Email">
+                <input type="password" id="senha" placeholder="Senha">
+                <input type="text" id="telefone" placeholder="Telefone">
+                <input type="number" id="idade" placeholder="Idade">
+                <button id="botao-cadastro">Registrar</button>
+            </div>
+
+            <div id="form-login" class="formulario" style="display: none;">
+                <h2>Login</h2>
+                <input type="email" id="loginEmail" placeholder="Email">
+                <input type="password" id="loginSenha" placeholder="Senha">
+                <button id="botao-login">Login</button>
+            </div>
+        </div>
+
+        <div id="info-usuario" style="display: none;">
+            <p>Usuário logado:</p>
+            <p>Nome: <span id="nome-usuario"></span></p>
+            <p>Email: <span id="email-usuario"></span></p>
+            <button id="botao-logout">Logout</button>
+        </div>
     </main>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="js/script.js" type="module"></script>
 </body>
 </html>

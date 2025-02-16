@@ -76,3 +76,98 @@ footer {
     padding: 1rem;
     margin-top: 2rem;
 }
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.botoes button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botoes button:hover {
+    background-color: #0056b3;
+}
+
+.formulario {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.formulario input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+    background-color: #218838;
+}
+
+#info-usuario {
+    display: none;
+    margin-top: 20px;
+}
+
+#info-usuario p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+#info-usuario p:first-child {
+    font-weight: bold;
+}
+
+#botao-logout {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #dc3545;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#botao-logout:hover {
+    background-color: #c82333;
+}
+
+.esconde {
+    display: none;
+  }
+  
