@@ -12,7 +12,7 @@ body {
 }
 
 .navbar {
-    background-color: #0088cc;
+    background-color: #003662;
     padding: 1rem;
 }
 
@@ -92,6 +92,7 @@ footer {
     justify-content: center;
     gap: 10px;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .botoes button {
@@ -99,7 +100,7 @@ footer {
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #003662;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -128,14 +129,14 @@ footer {
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    background-color: #28a745;
+    background-color: #008CFF;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .formulario button:hover {
-    background-color: #218838;
+    background-color: #0056b3;
 }
 
 #info-usuario {
@@ -171,3 +172,12 @@ footer {
     display: none;
   }
   
+
+.container-cadastro {
+    margin: 0 auto;
+    background-color: #003662;
+}
+
+.container-cadastro h2 {
+    color: white;
+}

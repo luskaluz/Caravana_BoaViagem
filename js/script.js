@@ -8,7 +8,7 @@ import {
 const mostrarFormulario = (formulario) => {
   document.getElementById("form-cadastro").style.display = "none";
   document.getElementById("form-login").style.display = "none";
-  document.getElementById(`form-${formulario}`).style.display = "block";
+  document.getElementById(`form-${formulario}`).style.display = "flex";
 };
 
 const atualizarInterface = async (usuario) => {
@@ -42,7 +42,7 @@ const atualizarInterface = async (usuario) => {
   } else {
     divInfoUsuario.style.display = "none";
     divBotoes.style.display = "";
-    formularioCadastro.style.display = "none";
+    formularioCadastro.style.display = "flex";
     formularioLogin.style.display = "none";
   }
 };
