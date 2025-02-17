@@ -23,23 +23,41 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static(path.join(__dirname, "../")));
 
+const validarDadosCadastro = (nome, email, senha, telefone, idade) => {
+  if (!nome || !email || !senha || !telefone || !idade) {
+    return "Todos os campos são obrigatórios.";
+  }
+
+  const regexTelefone = /^\(?\d{2}\)?\s?\d{4,5}[-\s]?\d{4}$/;
+  if (!regexTelefone.test(telefone)) {
+    return "Telefone inválido. Use o formato (XX) XXXXX-XXXX ou (XX) XXXX-XXXX.";
+  }
+
+  if (senha.length < 6) {
+    return "A senha deve ter pelo menos 6 caracteres.";
+  }
+
+  //trocar de acordo com o termo de uso dps
+  if (idade <= 18) {
+    return "Você deve ser um adulto para realizar o cadastro.";
+  }
+
+  return null;
+};
+
 // Cadastro
 app.post("/register", async (req, res) => {
   const { nome, email, senha, telefone, idade } = req.body;
 
-  if (!nome || !email || !senha || !telefone || !idade) {
-    return res.status(400).json({ error: "Todos os campos são obrigatórios." });
-  }
-
-  if (senha.length < 6) {
-    return res.status(400).json({ error: "A senha deve ter pelo menos 6 caracteres." });
+  const erroValidacao = validarDadosCadastro(nome, email, senha, telefone, idade);
+  if (erroValidacao) {
+    return res.status(400).json({ error: erroValidacao });
   }
 
   try {
     const userRecord = await auth.createUser({
       email,
       password: senha,
-      displayName: nome,
     });
 
     console.log("Usuário criado no Firebase Auth:", userRecord.uid);
@@ -54,7 +72,6 @@ app.post("/register", async (req, res) => {
     console.log("Dados salvos no Firestore:", { nome, email, telefone, idade });
 
     res.status(200).json({ message: "Usuário registrado com sucesso!" });
-
   } catch (error) {
     console.error("Erro no registro:", error);
 
@@ -73,6 +90,25 @@ app.post("/register", async (req, res) => {
     }
 
     res.status(400).json({ error: errorMessage });
+  }
+});
+
+
+// busca no banco de dados
+app.get("/user/:uid", async (req, res) => {
+  const { uid } = req.params;
+
+  try {
+    const userDoc = await db.collection("users").doc(uid).get();
+
+    if (!userDoc.exists) {
+      return res.status(404).json({ error: "Usuário não encontrado." });
+    }
+
+    res.status(200).json(userDoc.data());
+  } catch (error) {
+    console.error("Erro ao buscar dados do usuário:", error);
+    res.status(500).json({ error: "Erro ao buscar informações do usuário." });
   }
 });
 

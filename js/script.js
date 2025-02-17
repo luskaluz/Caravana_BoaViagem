@@ -20,13 +20,25 @@ const atualizarInterface = async (usuario) => {
   const formularioLogin = document.getElementById("form-login");
 
   if (usuario) {
-    divInfoUsuario.style.display = "block";
-    nomeUsuarioSpan.textContent = usuario.displayName;
-    emailUsuarioSpan.textContent = usuario.email;
+    try {
+      const resposta = await fetch(`/user/${usuario.uid}`);
+      const dados = await resposta.json();
 
-    divBotoes.style.display = "none";
-    formularioCadastro.style.display = "none";
-    formularioLogin.style.display = "none";
+      if (resposta.ok) {
+        nomeUsuarioSpan.textContent = dados.nome; 
+      } else {
+        nomeUsuarioSpan.textContent = "Usuário sem nome cadastrado.";
+      }
+
+      emailUsuarioSpan.textContent = usuario.email;
+      divInfoUsuario.style.display = "block";
+      divBotoes.style.display = "none";
+      formularioCadastro.style.display = "none";
+      formularioLogin.style.display = "none";
+    } catch (error) {
+      console.error("Erro ao buscar informações do usuário:", error);
+      alert("Erro ao carregar informações do usuário.");
+    }
   } else {
     divInfoUsuario.style.display = "none";
     divBotoes.style.display = "";
@@ -34,6 +46,7 @@ const atualizarInterface = async (usuario) => {
     formularioLogin.style.display = "none";
   }
 };
+
 
 onAuthStateChanged(auth, (usuario) => {
   atualizarInterface(usuario);
@@ -48,11 +61,6 @@ const cadastrar = async () => {
   const idade = document.getElementById("idade").value;
 
   console.log("Dados de cadastro:", { nome, email, senha, telefone, idade });
-
-  if (!nome || !email || !senha || !telefone || !idade) {
-    alert("Todos os campos são obrigatórios.");
-    return;
-  }
 
   try {
     const resposta = await fetch("/register", {
