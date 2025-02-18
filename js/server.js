@@ -2,7 +2,6 @@ require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const firebaseAdmin = require("firebase-admin");
-const cors = require("cors");
 const path = require("path");
 
 const app = express();
@@ -20,7 +19,7 @@ const auth = firebaseAdmin.auth();
 const db = firebaseAdmin.firestore();
 
 app.use(bodyParser.json());
-app.use(cors());
+
 app.use(express.static(path.join(__dirname, "../")));
 
 const validarDadosCadastro = (nome, email, senha, telefone, idade) => {
@@ -92,7 +91,6 @@ app.post("/register", async (req, res) => {
     res.status(400).json({ error: errorMessage });
   }
 });
-
 
 // busca no banco de dados
 app.get("/user/:uid", async (req, res) => {

@@ -98,7 +98,7 @@ const login = async () => {
     alert("Login bem-sucedido!");
     atualizarInterface(usuario);
   } catch (error) {
-    alert("Erro ao fazer login: " + error.message);
+    alert("Erro ao fazer login: verifique email e ou senha" );
   }
 };
 
