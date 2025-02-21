@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -25,14 +26,34 @@ body {
 .menu li a {
     color: white;
     text-decoration: none;
+    position: relative;
 }
 
+.menu li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu li a:hover::after {
+    transform: scaleX(1);
+}
 .banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/banner.jpg') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/img_backblur.png') no-repeat center center;
     background-size: cover;
     color: white;
-    padding: 5rem;
+    height: 600px;
     text-align: center;
+}
+
+.banner h1{
+    padding-top: 200px;
 }
 
 .destinos {
@@ -40,28 +61,101 @@ body {
     background-color: #e8f7ff;
 }
 
+.destinos h2{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 .cards {
     display: flex;
     justify-content: space-around;
 }
 
+.cards img{
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
 .card {
-    background-color: white;
     padding: 1.5rem;
     margin: 0.5rem;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.galeria {
-    padding: 2rem;
+.card h3{
+    margin: 5px;
 }
 
-.grid-galeria {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+.preco-destaque{
+    color: #646464;
+    margin: 5px 0 10px 10px;
 }
+
+.eventos {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.eventos h2{
+    margin-bottom: 50px;
+}
+
+.grid-eventos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.evento {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start;
+    width: 500px;
+    gap: 15px;
+}
+
+.evento img {
+    width: 150px;
+    height: 130px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.evento-info {
+    text-align: left;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.evento h4{
+    margin-bottom: 5px;
+}
+
+.botao-evento {
+    display: inline-block;
+    padding: 10px 100px;
+    margin: 10px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    align-self: flex-start;
+}
+
+.botao-evento:hover {
+    background: #0056b3;
+}
+
 
 .image-placeholder {
     background-color: #ddd;
@@ -126,13 +220,15 @@ footer {
 
 .formulario button {
     padding: 10px;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 500;
     border: none;
     border-radius: 5px;
     background-color: #008CFF;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-transform: uppercase;
 }
 
 .formulario button:hover {

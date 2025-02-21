@@ -1,25 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caravana da Baixada Santista</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/jpeg" href="images/onibus_viagem.jpg">
-    <style>
-        .banner {
-            background: url('images/onibus_viagem.jpg') no-repeat center center;
-            background-size: cover;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-            text-align: center;
-        }
-    </style>
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -41,24 +30,70 @@
         <section class="destinos">
             <h2>Destinos Imperdíveis</h2>
             <div class="cards">
-                <div class="card">Museu do Café</div>
-                <div class="card">Aquário Municipal</div>
-                <div class="card">Orquidário de Santos</div>
+                <div class="card">
+                    <img src="images/museucafe.png">
+                    <h3>MUSEU DO CAFÉ - SANTOS/SP</h3>
+                    <p class="preco-destaque">R$25 por pessoa</p>
+                </div>
+                <div class="card">
+                    <img src="images/aquario.png">
+                    <h3>AQUÁRIO MUNICIPAL - SÃO PAULO/SP</h3>
+                    <p class="preco-destaque">R$50 por pessoa</p>
+                </div>
+                <div class="card">
+                    <img src="images/orquidario.png">
+                    <h3>ORQUIDÁRIO DE SANTOS - SANTOS/SP</h3>
+                    <p class="preco-destaque">R$25 por pessoa</p>
+                </div>
             </div>
         </section>
 
-        <section class="galeria">
-            <h2>Galeria</h2>
-            <div class="grid-galeria">
-                <div class="image-placeholder">Imagem 1</div>
-                <div class="image-placeholder">Imagem 2</div>
-                <div class="image-placeholder">Imagem 3</div>
+        <section class="eventos">
+            <h2>Confira!</h2>
+            <div class="grid-eventos">
+                <div class="evento">
+                    <img src="images/parqueatibaia.jpg" alt="Evento 1">
+                    <div class="evento-info">
+                        <h3>Parque Edmundo Zanoni</h3>
+                        <h4>Atibaia/SP</h4>
+                        <p>R$100,00</p>
+                        <p>10/05</p>
+                        <a href="parquezanoni.html" class="botao-evento">Garanta já</a>
+                    </div>
+
+                </div>
+
+                <div class="evento">
+                    <img src="images/areia-que-canta.jpg" alt="Evento 2">
+                    <div class="evento-info">
+                        <h3>Areia que Canta </h3>
+                        <h4>Brotas/SP</h4>
+                        <p>R$100,00</p>
+                        <p>15/05</p>
+                        <a href="areiaquecanta.html" class="botao-evento">Garanta já</a>
+                    </div>
+
+                </div>
+
+                <div class="evento">
+                    <img src="images/cachoeira-do-cassorova.jpg" alt="Evento 3">
+                    <div class="evento-info">
+                        <h3>Ecoparque Cassorova</h3>
+                        <h4>Brotas/SP</h4>
+                        <p>R$100,00</p>
+                        <p>30/05</p>
+                        <a href="ecoparquecassorova.html" class="botao-evento">Garanta já</a>
+                    </div>
+
+                </div>
             </div>
         </section>
+
     </main>
 
     <footer>
-        <p>© 2025 Caravana da Baixada Santista. Todos os direitos reservados.</p>
+        <p>© 2025 Caravana da Boa Viagem. Todos os direitos reservados.</p>
     </footer>
 </body>
+
 </html>
