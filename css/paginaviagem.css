@@ -1,0 +1,99 @@
+/* viagem.css - Estilos específicos para as páginas de viagem */
+
+/* Foto Principal */
+.foto-principal img {
+    width: 100%;
+    height: 600px;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+/* Galeria de Fotos */
+.galeria-viagem {
+    padding: 2rem;
+    background-color: #e8f7ff;
+}
+
+.grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.grid-galeria img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-galeria img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Descrição da Viagem */
+.descricao-viagem {
+    padding: 2rem;
+    background-color: #fff;
+    margin: 2rem auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+}
+
+.descricao-viagem h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #003662;
+}
+
+.descricao-viagem p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Formulário de Reserva */
+.formulario-reserva {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-reserva h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #003662;
+}
+
+.formulario-reserva input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.formulario-reserva button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0088cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-reserva button:hover {
+    background-color: #006699;
+}

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url(roteiros.css);
+@import url(paginaviagem.css);
 
 * {
     margin: 0;
@@ -44,16 +46,22 @@ body {
 .menu li a:hover::after {
     transform: scaleX(1);
 }
+
 .banner {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/img_backblur.png') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/freepik__the-style-is-candid-image-photography-with-natural__80086.png') no-repeat center center;
     background-size: cover;
     color: white;
     height: 600px;
     text-align: center;
+    
 }
 
-.banner h1{
-    padding-top: 200px;
+.banner h1 {
+    padding-top: 270px;
+    font-family: "Noto Sans Warang Citi", sans-serif;
+    font-style: normal;
+    font-size: 40px;
+ 
 }
 
 .destinos {
@@ -61,7 +69,7 @@ body {
     background-color: #e8f7ff;
 }
 
-.destinos h2{
+.destinos h2 {
     margin-top: 40px;
     margin-bottom: 40px;
     font-size: 48px;
@@ -69,27 +77,7 @@ body {
     text-transform: uppercase;
 }
 
-.cards {
-    display: flex;
-    justify-content: space-around;
-}
-
-.cards img{
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
-
-.card {
-    padding: 1.5rem;
-    margin: 0.5rem;
-    border-radius: 5px;
-}
-
-.card h3{
-    margin: 5px;
-}
-
-.preco-destaque{
+.preco-destaque {
     color: #646464;
     margin: 5px 0 10px 10px;
 }
@@ -100,7 +88,7 @@ body {
     background-color: #f9f9f9;
 }
 
-.eventos h2{
+.eventos h2 {
     margin-bottom: 50px;
 }
 
@@ -136,7 +124,7 @@ body {
     flex-direction: column;
 }
 
-.evento h4{
+.evento h4 {
     margin-bottom: 5px;
 }
 
@@ -266,8 +254,8 @@ footer {
 
 .esconde {
     display: none;
-  }
-  
+}
+
 
 .container-cadastro {
     margin: 0 auto;
@@ -276,4 +264,88 @@ footer {
 
 .container-cadastro h2 {
     color: white;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card {
+    padding: 1.5rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+
+    width: 250px;
+    max-width: 250px;
+    border: 1px solid #ccc;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+} */
+
+.card h3 {
+    margin: 5px;
+}
+
+.servicos-section {
+    padding: 2rem 10rem;
+}
+
+.servicos-section h1 {
+    margin-bottom: 1rem;
+}
+
+.servicos {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.servicos-title {
+    color: #004080;
+    margin-bottom: 10px;
+}
+
+.servicos-list {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.servicos-item {
+    padding: 10px 0;
+    font-size: 18px;
+}
+
+.servicos-item::before {
+    content: "✔";
+    color: #004080;
+    font-weight: bold;
+    margin-right: 10px;
 }

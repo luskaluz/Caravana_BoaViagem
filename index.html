@@ -5,8 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caravana da Baixada Santista</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Warang+Citi&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/jpeg" href="images/onibus_viagem.jpg">
+
+
 </head>
 
 <body>
@@ -24,27 +30,53 @@
 
     <main>
         <section class="banner">
-            <h1>Explore a Baixada Santista com a nossa Caravana</h1>
+            <h1>CARAVANA DA BOA VIAGEM</h1>
+            <p>Tradição, confiança e excelência em cada viagem</p>
         </section>
 
         <section class="destinos">
             <h2>Destinos Imperdíveis</h2>
-            <div class="cards">
-                <div class="card">
-                    <img src="images/museucafe.png">
-                    <h3>MUSEU DO CAFÉ - SANTOS/SP</h3>
-                    <p class="preco-destaque">R$25 por pessoa</p>
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide card">
+                        <img src="images/museucafe.png">
+                        <h4>MUSEU DO CAFÉ - SANTOS/SP</h4>
+                        <p class="preco-destaque">R$25 por pessoa</p>
+                    </div>
+                    <div class="swiper-slide card">
+                        <img src="images/aquario.png">
+                        <h4>AQUÁRIO MUNICIPAL - SÃO PAULO/SP</h4>
+                        <p class="preco-destaque">R$50 por pessoa</p>
+                    </div>
+                    <div class="swiper-slide card">
+                        <img src="images/orquidario.png">
+                        <h4>ORQUIDÁRIO DE SANTOS - SANTOS/SP</h4>
+                        <p class="preco-destaque">R$25 por pessoa</p>
+                    </div>
+                    <div class="swiper-slide card">
+                        <img src="images/orquidario.png">
+                        <h4>ORQUIDÁRIO DE SANTOS - SANTOS/SP</h4>
+                        <p class="preco-destaque">R$25 por pessoa</p>
+                    </div>
+                    <div class="swiper-slide card">
+                        <img src="images/orquidario.png">
+                        <h4>ORQUIDÁRIO DE SANTOS - SANTOS/SP</h4>
+                        <p class="preco-destaque">R$25 por pessoa</p>
+                    </div>
+                    <div class="swiper-slide card">
+                        <img src="images/orquidario.png">
+                        <h4>ORQUIDÁRIO DE SANTOS - SANTOS/SP</h4>
+                        <p class="preco-destaque">R$25 por pessoa</p>
+                    </div>
                 </div>
-                <div class="card">
-                    <img src="images/aquario.png">
-                    <h3>AQUÁRIO MUNICIPAL - SÃO PAULO/SP</h3>
-                    <p class="preco-destaque">R$50 por pessoa</p>
-                </div>
-                <div class="card">
-                    <img src="images/orquidario.png">
-                    <h3>ORQUIDÁRIO DE SANTOS - SANTOS/SP</h3>
-                    <p class="preco-destaque">R$25 por pessoa</p>
-                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </section>
 
@@ -94,6 +126,8 @@
     <footer>
         <p>© 2025 Caravana da Boa Viagem. Todos os direitos reservados.</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
